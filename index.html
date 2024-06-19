@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Hunter</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-poppins">
+  <header class=" bg-[#0D6EFD0D] lg:h-[806px]">
+    <nav class="container mx-auto">
+      <div class="navbar py-10">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+
+          </div>
+          <a class="btn btn-ghost text-xl">Hot Gadgets</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Button</a>
+        </div>
+      </div>
+    </nav>
+    <section class="container mx-auto">
+      <div class="space-y-6 text-center py-10">
+        <h1 class="font-bold text-[#100F0F] text-6xl">Apple Iphone 13 Pro Max</h1>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered
+          alteration
+          in
+          some form, by injected humou.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="flex justify-center items-center">
+        <img class="hidden lg:flex" src="./images/image2.png" alt="">
+        <img src="./images/image1.png" alt="">
+        <img class="hidden lg:flex" src="./images/image3.png" alt="">
+      </div>
+    </section>
+  </header>
+
+
+  <main>
+    <section class="container mx-auto mt-64">
+      <div class="flex flex-col justify-center items-center space-y-8  mb-12">
+        <h2 class="text-3xl font-semibold text-[#100F0F]">Search your phone</h2>
+        <label class="input bg-[#100F0F0D] flex items-center gap-2 min-h-0 min-w-0 h-auto w-auto px-5 lg:w-[752px]">
+          <input id="search-input" type="text" class="grow outline-none " placeholder="Search your phone" />
+          <button onclick="searchButton()"
+            class="btn min-h-0 min-w-0 h-auto w-auto px-9 py-4 bg-[#0D6EFD] text-white font-semibold text-xl -mr-5">Search</button>
+        </label>
+      </div>
+      <div id="load-spinner" class="flex justify-center hidden">
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-24 gap-y-20">
+      </div>
+      <div id="phone-container2">
+
+      </div>
+      <div class="flex justify-center mt-16">
+        <button id="show-all" onclick="handleShowAll()"
+          class="btn btn-accent min-h-0 min-w-0 h-auto w-auto px-9 py-4 hidden">Show
+          All</button>
+      </div>
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+      </dialog>
+    </section>
+  </main>
+
+
+  <footer>
+
+  </footer>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
